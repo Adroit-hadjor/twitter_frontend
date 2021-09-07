@@ -1,4 +1,4 @@
-const REACT_APP_API_URL= 'http://localhost:1337'
+const REACT_APP_API_URL= 'https://twitterbackendapi.herokuapp.com'
 
 export const Post = async(url,body,token) => {
   const link = `${REACT_APP_API_URL}` + '/' + url;
