@@ -1,0 +1,308 @@
+
+.main_tweet{
+    border:1px solid $color-grey-dark;
+    margin-left:12.5% ;
+    margin-bottom: 10px;
+    border-radius:10px ;
+    height: auto;
+}
+.tweet_box{
+    border:1px solid rgb(56, 68, 77);
+    padding: 5px 15px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover{
+        background-color: rgb(25, 39, 52);
+        cursor: pointer;
+    }
+}
+.tweet_text{
+   // border: 1px solid rebeccapurple;
+    width: 100%;
+    padding: 0px 0px 5px 0px;
+    min-height: 0px;
+    margin-bottom: 5px;
+    @include respond(tablet) { 
+        font-size: 15px;
+    }
+    
+
+   
+}
+.iconandtext{
+   // border:1px solid  palevioletred;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: $color-grey-light;
+}
+
+
+.reply_group{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+    @include respond(tablet) {
+     padding-right: 0px;
+    }
+}
+
+.tweet_images{
+    width:99%;
+    height:150px;
+
+    &_3b{
+        width:99%;
+        height:150px;
+    }
+    &_2b{
+        width:49.5%;
+      
+        height:300px;
+    }
+    &_1b{
+        width:100%;
+        margin: 3px;
+       border-radius: 10px;
+        height:300px;
+    }
+    
+   
+   
+
+    &_1{
+        border-top-left-radius:20px;  
+        &_3{
+            display: grid;
+            grid-area: left;
+            height: 305px !important;
+            border-top-left-radius:20px ;
+            border-bottom-left-radius: 20px;
+        }
+        &_2{
+            border-top-left-radius:20px ;
+            border-bottom-left-radius: 20px;
+        }
+        &_1{
+
+        }
+    }
+    &_2{
+        border-top-right-radius:20px;  
+        &_3{
+            display: grid;
+            grid-area: upper_right;
+            border-top-right-radius:20px ;
+        }
+        &_2{
+            border-top-right-radius:20px ;
+            border-bottom-right-radius: 20px;
+        }
+    }
+    &_3{
+        border-bottom-left-radius:20px;  
+        &_3{
+            display: grid;
+            grid-area: lower_right;
+            border-bottom-right-radius:20px ;
+        }
+    }
+    &_4{
+        border-bottom-right-radius:20px;  
+    }
+  
+    &_container{
+       // border: 1px solid green;
+        &_1{
+            display: flex;
+            justify-content: flex-start;
+
+        }
+        //border:1px solid springgreen;
+        display: grid;
+        //grid-template-rows:  15vh  110vh 130vh 120vh ;
+        grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 0.5fr);
+      gap:2px 0px;
+      padding: 1px 1px;
+      height: auto;
+
+      &_3{
+        display: grid;
+        //grid-template-rows:  15vh  110vh 130vh 120vh ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left upper_right"
+                             "left lower_right";
+      grid-template-rows: repeat(2, 0.5fr);
+      gap:2px 0px;
+      padding: 1px 1px;
+      height: auto; 
+      }
+
+      &_2{
+          display: flex;
+          justify-content: space-between;
+          padding: 0px 1px;
+
+      }
+
+    }
+    
+
+
+}
+.tweet_upper{
+    display: flex;
+    flex-direction: row;
+   // border: 1px solid blue;
+    justify-content: space-between;
+}
+.tweet_lower{
+    //border: 1px solid white;
+    display: flex;
+    justify-content: row;
+    height: auto;
+    @include respond(tablet) {
+     
+}
+}
+.t_right{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    @include respond(tablet) {
+        padding-left: 5px;
+     }
+}
+.upper_right{
+   // border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left_space{
+    width:12%;
+   // border: 1px solid rgb(247, 235, 235);
+}
+.right_text{
+    width: 90%;
+   //border: 1px solid red;
+   @include respond(mobileM) {
+     display: flex;
+     justify-content: space-between;
+}
+}
+
+.namespace{
+    display: flex;
+    flex-direction: row;
+   // border:1px solid yellow;
+    
+   width: 50%;
+    justify-content: flex-start;
+    padding-right: 15px;
+    height: 30px;
+
+ 
+
+    &_quote{
+        display: flex;
+    flex-direction: row;
+    //border:1px solid yellow;
+    
+   width: 100%;
+    justify-content: flex-start;
+    
+    height: 30px;
+
+    @include respond(mobileL) {
+        width: 250px;
+       
+}
+    }
+
+    &_username{
+        color:$color-grey-light;
+    }
+    @include respond(tablet) {
+        width: 60%;
+       
+}
+
+    @include respond(mobileL) {
+        width: 80%;
+}
+    @include respond(mobileM) {
+            width: 70%;
+    }
+}
+.btn3{
+   width:50%;
+    //border:1px solid white;
+    display: flex;
+    justify-content: flex-end;
+    color: $color-grey-light;
+    height: 30px;
+
+
+    @include respond(tablet) {
+        width: 20%;
+       
+}
+    @include respond(mobileL) {
+        width: 20%;
+        
+}
+
+    @include respond(mobileM) {
+        width: 30%;
+}
+    
+}
+
+.upper_left{
+    //border:1px solid yellow;
+    width:12%;
+    &_avi{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5px;
+        align-items: center;
+        height: auto ;
+    }
+}
+
+.who_retweeted{
+     font-size: 15px;
+     font-weight: bold;
+     padding: 5px 0px;
+     color:$color-grey-light;
+}
+
+.retweet{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 5px;
+    font-size: small;
+    color : $color-grey-light;
+    font-weight: bold;
+}
+
+.tweet_avi{
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+   
+ 
+    
+   
+
+    &_quote{
+        border-radius: 100px;
+        height: 25px;
+        width: 25px;
+    }
+}
