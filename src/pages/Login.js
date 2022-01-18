@@ -69,7 +69,7 @@ const Login = () => {
     if (response?.jwt) {
       history.push("/");
     } else {
-      alert("Something went wrong ");
+      alert("Incorrect username or password ");
     }
   };
 

@@ -9,6 +9,7 @@ import {
   FaDev,
   FaSearch,
 } from "react-icons/fa";
+import avi from "../images/spiderman.jpg"
 import MobileComponent from "./mobileComponent";
 import { GrImage } from "react-icons/gr";
 import { useHistory } from "react-router-dom";
@@ -34,6 +35,7 @@ function MiddleColumn() {
   const tweets = useSelector((state) => state.allTweets.tweets);
 
   const getTweets = async () => {
+    console.log("token",cookies.token)
     const posts = await Get("tweets", cookies.token);
     return posts;
   };
@@ -92,7 +94,7 @@ function MiddleColumn() {
             <div className="half upper">
               <img
                 src={
-                  "https://scontent.facc5-1.fna.fbcdn.net/v/t1.6435-1/p240x240/33894871_1381565591989139_6877148170325852160_n.jpg?_nc_cat=102&ccb=1-4&_nc_sid=7206a8&_nc_eui2=AeEC8K7AjVT6IFAtCEiwUVpU3J0Mu7sdjg3cnQy7ux2ODUuZMNXMK6KMqtJmUTUtZ_t8Yp5-DlZawbREa9hLrKDj&_nc_ohc=sCKyUF4hawYAX_OEc-g&_nc_ht=scontent.facc5-1.fna&oh=b5b6694317a4a1e9f264b25cc2c3ae44&oe=613C5EE5"
+                 avi
                 }
                 className="wh_avi"
               />
@@ -296,7 +298,7 @@ function MiddleColumn() {
                     <div className="upper_left upper_left_avi">
                       <img
                         src={
-                          "https://scontent.facc5-1.fna.fbcdn.net/v/t1.6435-1/p240x240/33894871_1381565591989139_6877148170325852160_n.jpg?_nc_cat=102&ccb=1-4&_nc_sid=7206a8&_nc_eui2=AeEC8K7AjVT6IFAtCEiwUVpU3J0Mu7sdjg3cnQy7ux2ODUuZMNXMK6KMqtJmUTUtZ_t8Yp5-DlZawbREa9hLrKDj&_nc_ohc=sCKyUF4hawYAX_OEc-g&_nc_ht=scontent.facc5-1.fna&oh=b5b6694317a4a1e9f264b25cc2c3ae44&oe=613C5EE5"
+                          avi
                         }
                         className="tweet_avi"
                         alt=""
